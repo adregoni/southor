@@ -1,0 +1,16 @@
+**/bin/
+**/obj/
+**/TestResults/
+artifacts/
+.git/
+.github/
+.vs/
+.idea/
+.vscode/
+docs/
+*.user
+*.suo
+*.log
+.env
+.env.*
+!.env.example
