@@ -1,0 +1,45 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Aa]rtifacts/
+[Tt]est[Rr]esults/
+
+# .NET tooling
+.dotnet/
+project.lock.json
+project.fragment.lock.json
+*.nuget.g.props
+*.nuget.g.targets
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider and editor metadata
+.idea/
+*.sln.iml
+.vscode/
+
+# Logs and local diagnostics
+*.log
+*.stackdump
+coverage/
+coverage.*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.*.Local.json
+secrets.json
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
