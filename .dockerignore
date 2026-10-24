@@ -2,6 +2,7 @@
 **/obj/
 **/TestResults/
 artifacts/
+.dotnet/
 .git/
 .github/
 .vs/
