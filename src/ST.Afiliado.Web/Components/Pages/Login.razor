@@ -1,0 +1,123 @@
+@page "/"
+@page "/login"
+@rendermode InteractiveServer
+
+<PageTitle>Entrar | Southor</PageTitle>
+
+<main class="login-shell">
+    <section class="login-showcase" aria-label="Southor Afiliados">
+        <a class="brand-lockup brand-lockup-light" href="/login" aria-label="Southor">
+            <img src="images/southor-mark.svg" alt="" />
+            <span class="brand-name">SOUTHOR</span>
+        </a>
+
+        <div class="showcase-copy">
+            <span class="eyebrow eyebrow-light">PLATAFORMA DE AFILIADOS</span>
+            <h1>Boas ofertas.<br /><span>Mais alcance.</span></h1>
+            <p>Encontre oportunidades, organize suas campanhas e acompanhe seus canais em um só lugar.</p>
+        </div>
+
+        <div class="showcase-note">
+            <span class="showcase-note-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18" /></svg>
+            </span>
+            <span><strong>Uma operação mais simples</strong><br />Do produto ao link compartilhado.</span>
+        </div>
+        <span class="showcase-orbit orbit-one"></span>
+        <span class="showcase-orbit orbit-two"></span>
+    </section>
+
+    <section class="login-content">
+        <a class="brand-lockup brand-lockup-mobile" href="/login" aria-label="Southor">
+            <img src="images/southor-mark.svg" alt="" />
+            <span class="brand-name">SOUTHOR</span>
+        </a>
+
+        <div class="login-card">
+            <div class="login-heading">
+                <span class="eyebrow">ÁREA DO AFILIADO</span>
+                <h2>Bem-vindo de volta</h2>
+                <p>Entre na sua conta para acessar o console Southor.</p>
+            </div>
+
+            <form class="login-form" @onsubmit="HandleSubmit" @onsubmit:preventDefault="true">
+                <label for="email">E-mail</label>
+                <input id="email"
+                       type="email"
+                       name="email"
+                       placeholder="voce@empresa.com.br"
+                       autocomplete="username"
+                       required
+                       @bind="Email" />
+
+                <div class="password-label-row">
+                    <label for="password">Senha</label>
+                    <button class="text-button" type="button" @onclick="ShowPasswordRecoveryMessage">Esqueceu a senha?</button>
+                </div>
+                <div class="password-field">
+                    <input id="password"
+                           type="@(ShowPassword ? "text" : "password")"
+                           name="password"
+                           placeholder="Digite sua senha"
+                           autocomplete="current-password"
+                           required
+                           @bind="Password" />
+                    <button class="password-toggle" type="button" @onclick="TogglePasswordVisibility" aria-label="@(ShowPassword ? "Ocultar senha" : "Mostrar senha")">
+                        @if (ShowPassword)
+                        {
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8" /><path d="M9.9 5.2A10.8 10.8 0 0 1 12 5c5 0 8.5 4.5 9.5 7-.4 1-1.1 2-2 2.9M6.2 6.2C4.3 7.5 3 9.4 2.5 12c.7 2 3.8 7 9.5 7 1.2 0 2.3-.2 3.3-.7" /></svg>
+                        }
+                        else
+                        {
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" /><circle cx="12" cy="12" r="2.5" /></svg>
+                        }
+                    </button>
+                </div>
+
+                <label class="remember-row" for="remember">
+                    <input id="remember" type="checkbox" @bind="RememberMe" />
+                    <span>Manter conectado</span>
+                </label>
+
+                <button class="primary-button login-submit" type="submit">
+                    Entrar no console
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </button>
+            </form>
+
+            @if (!string.IsNullOrWhiteSpace(FeedbackMessage))
+            {
+                <p class="login-feedback" role="status">@FeedbackMessage</p>
+            }
+
+            <div class="login-divider"><span>ou</span></div>
+            <a class="secondary-button" href="/painel">Ver painel demonstrativo</a>
+            <p class="login-helper">A autenticação será conectada em uma próxima etapa.</p>
+        </div>
+
+        <footer class="login-footer">
+            <span>© 2026 Southor</span>
+            <span>Gestão de afiliados</span>
+        </footer>
+    </section>
+</main>
+
+@code {
+    private string Email { get; set; } = string.Empty;
+    private string Password { get; set; } = string.Empty;
+    private bool RememberMe { get; set; }
+    private bool ShowPassword { get; set; }
+    private string? FeedbackMessage { get; set; }
+
+    private void TogglePasswordVisibility() => ShowPassword = !ShowPassword;
+
+    private void ShowPasswordRecoveryMessage()
+    {
+        FeedbackMessage = "A recuperação de senha será configurada junto com a autenticação.";
+    }
+
+    private void HandleSubmit()
+    {
+        FeedbackMessage = "A autenticação ainda não está conectada. Use o painel demonstrativo para conhecer a interface.";
+    }
+}

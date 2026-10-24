@@ -1,0 +1,171 @@
+@page "/painel"
+@rendermode InteractiveServer
+
+<PageTitle>Visão geral | Southor</PageTitle>
+
+<div class="console-shell">
+    <aside class="console-sidebar">
+        <a class="console-brand" href="/painel" aria-label="Southor Console">
+            <img src="images/southor-mark.svg" alt="" />
+            <span>SOUTHOR<span class="brand-console">CONSOLE</span></span>
+        </a>
+
+        <button class="workspace-picker" type="button">
+            <span class="workspace-avatar">S</span>
+            <span class="workspace-copy"><small>WORKSPACE</small><strong>Afiliados</strong></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" /></svg>
+        </button>
+
+        <nav class="sidebar-navigation" aria-label="Menu principal">
+            <span class="nav-section-title">CONSOLE</span>
+            <a class="sidebar-link active" href="/painel" aria-current="page">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5" /><rect x="13" y="3" width="8" height="5" rx="1.5" /><rect x="13" y="10" width="8" height="11" rx="1.5" /><rect x="3" y="13" width="8" height="8" rx="1.5" /></svg>
+                <span>Visão geral</span>
+            </a>
+            <span class="sidebar-link muted" aria-disabled="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" /><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21" /></svg>
+                <span>Ofertas</span><small>EM BREVE</small>
+            </span>
+            <span class="sidebar-link muted" aria-disabled="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h17" /><path d="m7 15 4-4 3 2 6-7" /><path d="M16 6h4v4" /></svg>
+                <span>Campanhas</span><small>EM BREVE</small>
+            </span>
+            <span class="sidebar-link muted" aria-disabled="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-11.2 6.5L4 19l1.1-4.1A7.5 7.5 0 1 1 20 11.5Z" /><path d="M9 9.5c.4 1.8 1.7 3.1 3.5 3.5" /></svg>
+                <span>Canais WhatsApp</span><small>EM BREVE</small>
+            </span>
+
+            <span class="nav-section-title nav-section-spaced">OPERAÇÃO</span>
+            <span class="sidebar-link muted" aria-disabled="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3.5 2" /></svg>
+                <span>Agendamentos</span><small>EM BREVE</small>
+            </span>
+            <span class="sidebar-link muted" aria-disabled="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z" /><path d="M14 3v5h5M9 13h7M9 17h7" /></svg>
+                <span>Histórico</span><small>EM BREVE</small>
+            </span>
+
+            <span class="nav-section-title nav-section-spaced">CONFIGURAÇÃO</span>
+            <span class="sidebar-link muted" aria-disabled="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.7a8 8 0 0 1-1.7 1l-.3 1.8h-2.8l-.3-1.8a8 8 0 0 1-1.7-1l-1.7.7-1.4-2.4 1.4-1.1a7 7 0 0 1 0-2l-1.4-1.1 1.4-2.4 1.7.7a8 8 0 0 1 1.7-1l.3-1.8h2.8l.3 1.8a8 8 0 0 1 1.7 1l1.7-.7 1.4 2.4-1.4 1.1a7 7 0 0 1 0 2Z" transform="translate(-1 -1) scale(1.08)" /></svg>
+                <span>Integrações</span><small>EM BREVE</small>
+            </span>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-help-icon">?</div>
+            <span><strong>Precisa de ajuda?</strong><small>Consulte a central de suporte</small></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+        </div>
+    </aside>
+
+    <div class="console-main">
+        <header class="console-topbar">
+            <div class="topbar-left">
+                <button class="mobile-menu-button" type="button" aria-label="Abrir menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+                </button>
+                <span class="topbar-product">Southor <span>/</span> Console</span>
+            </div>
+            <div class="topbar-right">
+                <button class="topbar-icon-button" type="button" aria-label="Ajuda">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M9.7 9a2.4 2.4 0 1 1 4.1 1.7c-1.1 1.1-1.8 1.3-1.8 2.8M12 17h.01" /></svg>
+                </button>
+                <span class="topbar-divider"></span>
+                <button class="user-menu" type="button">
+                    <span class="user-avatar">AR</span>
+                    <span class="user-menu-copy"><strong>Anderson</strong><small>Administrador</small></span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" /></svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <div class="breadcrumbs"><span>Console</span><span class="breadcrumb-separator">/</span><strong>Visão geral</strong></div>
+
+            <section class="page-heading">
+                <div>
+                    <span class="eyebrow">WORKSPACE / AFILIADOS</span>
+                    <h1>Visão geral</h1>
+                    <p>Acompanhe suas ofertas, campanhas e canais em um só lugar.</p>
+                </div>
+                <button class="primary-button create-campaign-button" type="button" disabled>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                    Nova campanha
+                </button>
+            </section>
+
+            <section class="metrics-grid" aria-label="Resumo da operação">
+                <article class="metric-card">
+                    <div class="metric-card-top"><span class="metric-label">Ofertas ativas</span><span class="metric-icon gold"><svg viewBox="0 0 24 24"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" /><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21" /></svg></span></div>
+                    <strong class="metric-value">0</strong>
+                    <span class="metric-footnote">Nenhuma oferta cadastrada</span>
+                </article>
+                <article class="metric-card">
+                    <div class="metric-card-top"><span class="metric-label">Mensagens enviadas</span><span class="metric-icon green"><svg viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-11.2 6.5L4 19l1.1-4.1A7.5 7.5 0 1 1 20 11.5Z" /><path d="m8.5 11 2.1 2.1 4.8-4.8" /></svg></span></div>
+                    <strong class="metric-value">0</strong>
+                    <span class="metric-footnote">Nenhum envio registrado</span>
+                </article>
+                <article class="metric-card">
+                    <div class="metric-card-top"><span class="metric-label">Campanhas em execução</span><span class="metric-icon blue"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h17" /><path d="m7 15 4-4 3 2 6-7" /><path d="M16 6h4v4" /></svg></span></div>
+                    <strong class="metric-value">0</strong>
+                    <span class="metric-footnote">Tudo pronto para começar</span>
+                </article>
+                <article class="metric-card">
+                    <div class="metric-card-top"><span class="metric-label">Canais conectados</span><span class="metric-icon violet"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3A8 8 0 0 1 12 20H5l1.2-3A8 8 0 0 1 4 12Z" /><path d="m9 12 2 2 4-4" /></svg></span></div>
+                    <strong class="metric-value">0<span class="metric-total"> / 3</span></strong>
+                    <span class="metric-footnote">Conecte suas plataformas</span>
+                </article>
+            </section>
+
+            <section class="dashboard-panels">
+                <article class="surface-card activity-card">
+                    <div class="surface-card-heading">
+                        <div><h2>Atividade recente</h2><p>Últimas ações da sua operação</p></div>
+                        <button class="quiet-button" type="button" disabled>Ver histórico <span aria-hidden="true">→</span></button>
+                    </div>
+                    <div class="empty-activity">
+                        <div class="empty-activity-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h17" /><path d="m7 15 4-4 3 2 6-7" /></svg></div>
+                        <strong>Seu painel está pronto</strong>
+                        <p>As atividades de ofertas e envios aparecerão aqui assim que você conectar seus canais.</p>
+                    </div>
+                </article>
+
+                <article class="surface-card getting-started-card">
+                    <div class="surface-card-heading">
+                        <div><h2>Primeiros passos</h2><p>Prepare seu workspace para operar</p></div>
+                        <span class="progress-count">0 de 3</span>
+                    </div>
+                    <ol class="setup-steps">
+                        <li><span class="step-number">1</span><span><strong>Conecte um marketplace</strong><small>Mercado Livre ou Shopee</small></span><span class="step-arrow">→</span></li>
+                        <li><span class="step-number">2</span><span><strong>Configure seu canal</strong><small>Prepare o envio via WhatsApp</small></span><span class="step-arrow">→</span></li>
+                        <li><span class="step-number">3</span><span><strong>Crie sua primeira campanha</strong><small>Escolha ofertas e agendamento</small></span><span class="step-arrow">→</span></li>
+                    </ol>
+                </article>
+            </section>
+
+            <section class="integrations-section">
+                <div class="section-heading"><div><h2>Suas integrações</h2><p>Conecte as plataformas que fazem parte da sua operação.</p></div><span class="integration-status"><i></i> 0 conectadas</span></div>
+                <div class="integration-grid">
+                    <article class="integration-card">
+                        <span class="integration-logo ml-logo">M</span>
+                        <span class="integration-copy"><strong>Mercado Livre</strong><small>Ofertas e links de afiliado</small></span>
+                        <span class="connection-pending">Pendente</span>
+                    </article>
+                    <article class="integration-card">
+                        <span class="integration-logo shopee-logo">S</span>
+                        <span class="integration-copy"><strong>Shopee</strong><small>Ofertas e links de afiliado</small></span>
+                        <span class="connection-pending">Pendente</span>
+                    </article>
+                    <article class="integration-card">
+                        <span class="integration-logo whatsapp-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-11.2 6.5L4 19l1.1-4.1A7.5 7.5 0 1 1 20 11.5Z" /><path d="M9 9.5c.4 1.8 1.7 3.1 3.5 3.5" /></svg></span>
+                        <span class="integration-copy"><strong>WhatsApp</strong><small>Canal de distribuição</small></span>
+                        <span class="connection-pending">Pendente</span>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="dashboard-footer"><span>Southor Console <span class="footer-dot">·</span> Ambiente de demonstração</span><span>Ajuda <span class="footer-dot">·</span> Feedback</span></footer>
+        </main>
+    </div>
+</div>
